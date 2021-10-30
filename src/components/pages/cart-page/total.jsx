@@ -1,8 +1,7 @@
-// Composant affiché dasn un encadré à droite dans /cart
-// Appelé par cart-page.jsx
-
+// Appelé par cart-page.jsx; composant affiché dans un encadré à droite dans /cart
 import React from 'react';
 import { withRouter } from 'react-router-dom';                    // Connecte le composant au Router et permet l'accès à history
+import './cart-page.scss';
 
 const Total = ({ itemCount, total, clearCart, history }) => {
   return (

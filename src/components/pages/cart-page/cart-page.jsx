@@ -1,6 +1,3 @@
-
-
-
 // Affiche tous les items contenus dans le cart
 import React, { useContext } from 'react';
 import { CartContext } from '../../../context/cart-context';

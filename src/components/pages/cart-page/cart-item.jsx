@@ -1,11 +1,6 @@
-
-
-
-
-// Affiche un item contenu dans le cart
-
+// Appelé par cart-page.jsx; Affiche un item contenu dans le cart
 import React from 'react';
-import { PlusCircleIcon, MinusCircleIcon, TrashIcon } from '../../icons';
+import { PlusCircleIcon, MinusCircleIcon, TrashIcon } from '../../icons/index';
 
 const CartItem = (props) => {
   const { increase, decrease, removeProduct, title, imageUrl, price, quantity, id, description } = props;
