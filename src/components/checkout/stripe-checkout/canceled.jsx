@@ -1,10 +1,10 @@
-// Utilisé par le backend lorsque la transaction Stripe échoue 
-// Le backend redige l'usagé ici et on lui indique que la transaction a échouée
+// Défini dans 'checkout.js' du backend.
+// le client est envoyé ici lorsque la transaction Stripe échoue
 import React from "react";
 import { withRouter } from "react-router";
 import Layout from '../../shared/layout';
 
-const Cancelled = ({ history }) => {
+const Canceled = ({ history }) => {
   return (
     <Layout>
       <div className='checkout'>
@@ -20,4 +20,4 @@ const Cancelled = ({ history }) => {
   );
 }
 
-export default withRouter(Cancelled);
+export default withRouter(Canceled);

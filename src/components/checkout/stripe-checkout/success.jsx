@@ -1,13 +1,14 @@
-// Utilisé par le backend lorsque la transaction Stripe réussie 
-// Le backend redige l'usagé ici et on lui indique que la transaction fut effectuée avec succes et que la commande est traitée
+// Défini dans 'checkout.js' du backend.
+// le client est envoyé ici pour vider le cart et annoncer le succès de la transaction
 import React, { useContext, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import Layout from '../../shared/layout';
 import { CartContext } from '../../../context/cart-context';
 
 const Success = ({ history }) => {
-  const { clearCart, cartItems } = useContext(CartContext);
-  useEffect(() => {
+  const { clearCart, cartItems } = useContext(CartContext);           // Extrait 'clearCart()' et 'cartItems' du simili-store
+
+  useEffect(() => {                                                   // Vide le cart
     if (cartItems.length !==0) { clearCart() }
   }, [clearCart, cartItems]);
 
